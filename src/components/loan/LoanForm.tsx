@@ -235,9 +235,7 @@ const LoanForm: React.FC = () => {
                   className={`input-field ${errors.education ? 'border-error-500 ring-1 ring-error-500' : ''}`}
                 >
                   <option value="graduate">Graduate</option>
-                  <option value="post_graduate">Post Graduate</option>
-                  <option value="doctorate">Doctorate</option>
-                  <option value="other">Other</option>
+                  <option value="not_graduate">Not Graduate</option>
                 </select>
                 {errors.education && <p className="text-error-500 text-sm mt-1">{errors.education}</p>}
               </div>
