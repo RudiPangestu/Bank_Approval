@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Your Trusted Financial Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#627d98',
+                            600: '#486581',
+                            700: '#334e68',
+                            800: '#243b53',
+                            900: '#102a43',
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                        success: {
+                            50: '#ecfdf5',
+                            500: '#10b981',
+                            700: '#047857',
+                        },
+                        warning: {
+                            50: '#fffbeb',
+                            500: '#f59e0b',
+                            700: '#b45309',
+                        },
+                        error: {
+                            50: '#fef2f2',
+                            500: '#ef4444',
+                            700: '#b91c1c',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .btn {
+            @apply px-6 py-3 rounded-md transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+        }
+        .btn-primary {
+            @apply bg-gold-500 hover:bg-gold-600 text-navy-900 focus:ring-gold-500;
+        }
+        .input-field {
+            @apply w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-navy-500 focus:border-navy-500;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+    {% include 'bank_app/includes/navbar.html' %}
+    
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+    
+    {% include 'bank_app/includes/footer.html' %}
+</body>
+</html>
